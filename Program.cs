@@ -1,10 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
-using System.Runtime.ConstrainedExecution;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {   //writes to console
@@ -13,6 +7,7 @@ internal class Program
         int Mode = Convert.ToInt32(Console.ReadLine());
         switch (Mode)
         {
+            
             case 1:
             Console.WriteLine("enter side a ");
             double a = Convert.ToDouble(Console.ReadLine());
@@ -35,13 +30,8 @@ internal class Program
             Console.WriteLine("pick an operator");
             string operator1 = Console.ReadLine()!;
             //we need it as a string as we dont need to add any more vars
-            if (Mode != 1 || Mode != 2)
+            switch (operator1)
             {
-                Environment.Exit(0);
-            }
-            // an attempt at fixing a bug.
-        switch (operator1)
-        {
             case "+":
             //had to convert to double for some unknown reason or else it just added 2 strings together, c# wizards can figure it out
             Console.WriteLine("your value is " + Convert.ToDouble(num1 + num2));
@@ -68,7 +58,6 @@ internal class Program
                 Console.WriteLine(operator1 + " is not a valid operator");
                 Thread.Sleep(2000);
                 break;
-            
         }
             Console.WriteLine("bye bye");
             Console.WriteLine("press a key to exit");
