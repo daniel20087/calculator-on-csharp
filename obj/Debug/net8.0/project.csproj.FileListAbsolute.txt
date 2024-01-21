@@ -26,3 +26,4 @@ D:\vscode\c#\calculator\obj\Debug\net8.0\refint\project.dll
 D:\vscode\c#\calculator\obj\Debug\net8.0\project.pdb
 D:\vscode\c#\calculator\obj\Debug\net8.0\project.genruntimeconfig.cache
 D:\vscode\c#\calculator\obj\Debug\net8.0\ref\project.dll
+D:\vscode\c#\calculator\obj\Debug\net8.0\project.sourcelink.json
