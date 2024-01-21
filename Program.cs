@@ -39,6 +39,7 @@ internal class Program
             {
                 Environment.Exit(0);
             }
+            // an attempt at fixing a bug.
         switch (operator1)
         {
             case "+":
