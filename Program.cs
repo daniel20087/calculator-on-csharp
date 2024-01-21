@@ -8,7 +8,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {   //writes to console
-        Console.WriteLine("wecome to thy calculations device");
+        Console.WriteLine("welcome to thy calculations device");
         Console.WriteLine("pick your mode 1 for hypotenuse 2 for calculator");
         int Mode = Convert.ToInt32(Console.ReadLine());
         switch (Mode)
@@ -35,6 +35,10 @@ internal class Program
             Console.WriteLine("pick an operator");
             string operator1 = Console.ReadLine()!;
             //we need it as a string as we dont need to add any more vars
+            if (Mode != 1 || Mode != 2)
+            {
+                Environment.Exit(0);
+            }
         switch (operator1)
         {
             case "+":
