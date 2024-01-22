@@ -29,7 +29,7 @@
             Console.WriteLine("your operators are -, +, /, *, ^, sqrt1, sqrt2 (these all must be written as exact)");
             Console.WriteLine("pick an operator");
             string operator1 = Console.ReadLine()!;
-            //we need it as a string as we dont need to add any more vars
+            //we need it as a string as we dont need to add any more doubles/ints
             switch (operator1)
             {
             case "+":
@@ -54,12 +54,14 @@
             case "sqrt2":
             Console.WriteLine("your value is " + Math.Sqrt(num2));
             break;
+            //yeah i dont know what im doing anymoer with these 2 sqrt :sob:
             default: 
                 Console.WriteLine(operator1 + " is not a valid operator");
                 Thread.Sleep(2000);
                 break;
         }
             Console.WriteLine("bye bye");
+            Thread.Sleep(2000);
             Console.WriteLine("press a key to exit");
             Console.ReadKey(true);
             //waits for an input before exiting doesnt display to console
