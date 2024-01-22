@@ -54,7 +54,7 @@
             case "sqrt2":
             Console.WriteLine("your value is " + Math.Sqrt(num2));
             break;
-            //yeah i dont know what im doing anymoer with these 2 sqrt :sob:
+            //yeah i dont know what im doing anymore with these 2 sqrt :sob:
             default: 
                 Console.WriteLine(operator1 + " is not a valid operator");
                 Thread.Sleep(2000);
