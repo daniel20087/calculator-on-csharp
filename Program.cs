@@ -54,13 +54,13 @@
             case "sqrt2":
             Console.WriteLine("your value is " + Math.Sqrt(num2));
             break;
+            //yeah i dont know what im doing anymore with these 2 sqrt :sob:
             case "random":
             Random randomint = new Random();
             int randomnum = randomint.Next(1, 101);
             Console.WriteLine("your value is " + randomnum);
             //yes i know this is stupid, but i feel like adding another switch for random numbers is gonna break me and i dont have the time to debug all of that right now
             break;
-            //yeah i dont know what im doing anymore with these 2 sqrt :sob:
             default: 
                 Console.WriteLine(operator1 + " is not a valid operator");
                 Thread.Sleep(2000);
