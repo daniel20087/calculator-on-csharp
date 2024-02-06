@@ -9,24 +9,66 @@
         {
             
             case 1:
-            Console.WriteLine("enter side a ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("enter side b ");
-            double b = Convert.ToDouble(Console.ReadLine());
-            Double c = Math.Sqrt((a*a) + (b*b));
-            Console.WriteLine("your answer is " + c);
+            double sideA, sideB;
+            while (true)
+                {
+                    Console.WriteLine("enter side A ");
+                    if (double.TryParse(Console.ReadLine(), out sideA))
+                    {
+                        break; // Exit the loop if valid input is provided
+                    }
+                    else
+                    {
+                        Console.WriteLine("not a valid side");
+                    }
+                }
+            while (true)
+                {
+                    Console.Write("enter side B ");
+                    if (double.TryParse(Console.ReadLine(), out sideB))
+                    {
+                        break; // Exit the loop if valid input is provided
+                    }
+                    else
+                    {
+                        Console.WriteLine("not a valid side.");
+                    }
+                }
+
+            double sideC = Math.Sqrt((sideA * sideA) + (sideB * sideB));
+            Console.WriteLine("your answer is " + sideC);
             Console.WriteLine("bye bye");
             Console.WriteLine("press a key to exit");
             Console.ReadKey(true);
             break;
             //waits for an input before exiting doesnt display to console
             case 2:
-            Console.WriteLine("pick your first number");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-            //double as we need decimals and we need to convert read line to double as it is a string
-            Console.WriteLine("pick your second number");
-            double num2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("your operators are -, +, /, *, ^, sqrt1, sqrt2, random (these all must be written as exact, and please keep them below 32 bit int limit :|");
+            double num1, num2;
+            while (true)
+                {
+                    Console.Write("Enter the first number: ");
+                    if (double.TryParse(Console.ReadLine(), out num1))
+                    {
+                        break; // Exit the loop if valid input is provided
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                    }
+                }
+            while (true)
+                {
+                    Console.Write("Enter the second number: ");
+                    if (double.TryParse(Console.ReadLine(), out num2))
+                    {
+                        break; // Exit the loop if valid input is provided
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                    }
+                }
+                Console.WriteLine("your operators are -, +, /, *, ^, sqrt1, sqrt2, random (these all must be written as exact, and please keep them below 32 bit int limit :|");
             Console.WriteLine("pick an operator");
             string operator1 = Console.ReadLine()!;
             //we need it as a string as we dont need to add any more doubles/ints
