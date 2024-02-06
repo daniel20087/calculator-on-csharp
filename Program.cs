@@ -57,9 +57,11 @@
             //yeah i dont know what im doing anymore with these 2 sqrt :sob:
             case "random":
             Random randomint = new Random();
-            int randomnum = randomint.Next(1, 101);
+            int Convertednum1 = (int)num1;
+            int Convertednum2 = (int)num2;
+            //had to learn typecasting out of nowwhere to do this :\ but it works so happy
+            double randomnum = randomint.Next(Convertednum1, Convertednum2 + 1);
             Console.WriteLine("your value is " + randomnum);
-            //yes i know this is stupid, but i feel like adding another switch for random numbers is gonna break me and i dont have the time to debug all of that right now
             break;
             default: 
                 Console.WriteLine(operator1 + " is not a valid operator");
