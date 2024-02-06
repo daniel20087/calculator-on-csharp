@@ -26,7 +26,7 @@
             //double as we need decimals and we need to convert read line to double as it is a string
             Console.WriteLine("pick your second number");
             double num2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("your operators are -, +, /, *, ^, sqrt1, sqrt2, random (these all must be written as exact)");
+            Console.WriteLine("your operators are -, +, /, *, ^, sqrt1, sqrt2, random (these all must be written as exact, and please keep them below 32 bit int limit :|");
             Console.WriteLine("pick an operator");
             string operator1 = Console.ReadLine()!;
             //we need it as a string as we dont need to add any more doubles/ints
@@ -57,10 +57,10 @@
             //yeah i dont know what im doing anymore with these 2 sqrt :sob:
             case "random":
             Random randomint = new Random();
-            int Convertednum1 = (int)num1;
-            int Convertednum2 = (int)num2;
+            int Convertednum1 = Convert.ToInt32(Math.Round(num1));
+            int Convertednum2 = Convert.ToInt32(Math.Round(num2));
             //had to learn typecasting out of nowwhere to do this :\ but it works so happy
-            double randomnum = randomint.Next(Convertednum1, Convertednum2 + 1);
+            int randomnum = randomint.Next(Convertednum1, Convertednum2 + 1);
             Console.WriteLine("your value is " + randomnum);
             break;
             default: 
