@@ -1,11 +1,16 @@
 ﻿﻿using System.Collections;
+using System.ComponentModel;
+using System.Linq.Expressions;
 
 internal class Program
 {
     private static void Main(string[] args)
     {   //writes to console
         Console.WriteLine("pick your mode 1 for hypotenuse 2 for calculator");
-        int Mode = Convert.ToInt32(Console.ReadLine());
+        try
+        {
+            int Mode = Convert.ToInt32(Console.ReadLine());
+        
         switch (Mode)
         {
             
@@ -30,10 +35,6 @@ internal class Program
                     {
                         break; // Exit the loop if valid input is provided
                     }
-                    else
-                    {
-                        Console.WriteLine("not a valid side.");
-                    }
                 }
 
             double sideC = Math.Sqrt((sideA * sideA) + (sideB * sideB));
@@ -52,10 +53,6 @@ internal class Program
                     {
                         break; // Exit the loop if valid input is provided
                     }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid number.");
-                    }
                 }
             while (true)
                 {
@@ -63,10 +60,6 @@ internal class Program
                     if (double.TryParse(Console.ReadLine(), out num2))
                     {
                         break; // Exit the loop if valid input is provided
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid number.");
                     }
                 }
                 Console.WriteLine("your operators are -, +, /, *, ^, sqrt1, sqrt2, random");
@@ -117,4 +110,8 @@ internal class Program
             Console.ReadKey(true);
             //waits for an input before exiting doesnt display to console
             break;
-        }}}
+        
+ } }catch(FormatException)
+ {
+    Console.WriteLine("please only write numbers");
+ }}}
