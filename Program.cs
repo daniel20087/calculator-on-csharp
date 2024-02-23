@@ -1,8 +1,9 @@
-﻿internal class Program
+﻿﻿using System.Collections;
+
+internal class Program
 {
     private static void Main(string[] args)
     {   //writes to console
-        Console.WriteLine("welcome to thy calculations device");
         Console.WriteLine("pick your mode 1 for hypotenuse 2 for calculator");
         int Mode = Convert.ToInt32(Console.ReadLine());
         switch (Mode)
@@ -68,7 +69,7 @@
                         Console.WriteLine("Invalid input. Please enter a valid number.");
                     }
                 }
-                Console.WriteLine("your operators are -, +, /, *, ^, sqrt1, sqrt2, random (these all must be written as exact, and please keep them below 32 bit int limit :|");
+                Console.WriteLine("your operators are -, +, /, *, ^, sqrt1, sqrt2, random");
             Console.WriteLine("pick an operator");
             string operator1 = Console.ReadLine()!;
             //we need it as a string as we dont need to add any more doubles/ints
